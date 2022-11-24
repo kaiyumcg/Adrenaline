@@ -1,0 +1,17 @@
+{
+  "name": "com.kaiyum.adrenaline",
+  "author": "Md Al Kaiyum (Rumman)",
+  "displayName": "Adrenaline",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "description": "An obstacle library",
+  "category": "Unity",
+  "keywords": [
+    "obstacle"
+  ],
+  "dependencies": {
+	"com.kaiyum.pathcreator": "1.0.0",
+	"com.kaiyum.unityext": "1.0.0",
+	"com.textus-games.serialized-reference-ui": "1.0.0"
+  }
+}
