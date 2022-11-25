@@ -10,8 +10,8 @@
     "obstacle"
   ],
   "dependencies": {
-	"com.kaiyum.pathcreator": "1.0.0",
-	"com.kaiyum.unityext": "1.0.0",
-	"com.textus-games.serialized-reference-ui": "1.0.0"
+	"com.kaiyum.pathcreator": "https://github.com/kaiyumcg/Path-Creator.git",
+	"com.kaiyum.unityext": "https://github.com/kaiyumcg/UnityExt.git",
+	"com.textus-games.serialized-reference-ui": "https://github.com/kaiyumcg/UnitySerializedReferenceUI.git"
   }
 }
