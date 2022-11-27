@@ -2,10 +2,9 @@
     "name": "Adrenaline",
     "rootNamespace": "",
     "references": [
-        "UnityExt",
         "AttributeExt",
-        "PathCreator",
-        "Textus.SerializeReferenceUI"
+        "UnityExt",
+        "PathCreator"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
