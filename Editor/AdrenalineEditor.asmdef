@@ -2,7 +2,8 @@
     "name": "AdrenalineEditor",
     "rootNamespace": "",
     "references": [
-        "Adrenaline"
+        "Adrenaline",
+        "EditorUtil"
     ],
     "includePlatforms": [
         "Editor"

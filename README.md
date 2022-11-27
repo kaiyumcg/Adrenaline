@@ -11,6 +11,7 @@ Since unity does not support git dependencies, you need the following entries as
 ```C#
 "com.kaiyum.attributeext" : "https://github.com/kaiyumcg/AttributeExt.git",
 "com.kaiyum.unityext": "https://github.com/kaiyumcg/UnityExt.git",
-"com.kaiyum.pathcreator": "https://github.com/kaiyumcg/Path-Creator.git"
+"com.kaiyum.pathcreator": "https://github.com/kaiyumcg/Path-Creator.git",
+"com.kaiyum.editorutil": "https://github.com/kaiyumcg/EditorUtil.git"
 ```
 Add them into your manifest.json file in "Packages\" directory of your unity project, if they are already not in manifest.json file.

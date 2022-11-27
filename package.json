@@ -11,6 +11,7 @@
   ],
   "dependencies": {
     "com.kaiyum.pathcreator": "https://github.com/kaiyumcg/Path-Creator.git",
-    "com.kaiyum.unityext": "https://github.com/kaiyumcg/UnityExt.git"
+    "com.kaiyum.unityext": "https://github.com/kaiyumcg/UnityExt.git",
+    "com.kaiyum.editorutil": "https://github.com/kaiyumcg/EditorUtil.git"
   }
 }
