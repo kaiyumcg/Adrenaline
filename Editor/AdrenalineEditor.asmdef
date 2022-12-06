@@ -3,7 +3,7 @@
     "rootNamespace": "",
     "references": [
         "Adrenaline",
-        "EditorUtil"
+        "KEditorUtil"
     ],
     "includePlatforms": [
         "Editor"
