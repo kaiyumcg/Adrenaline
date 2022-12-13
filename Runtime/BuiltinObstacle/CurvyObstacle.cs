@@ -28,7 +28,7 @@ namespace Adrenaline
             base.OnStartReceiverDeath(receiver);
             StopAllCoroutines();
             var anims = GetComponentsInChildren<Animator>(true);
-            anims.ExForEach((anim) =>
+            anims.ExForEachSafe((anim) =>
             {
                 if (anim != null)
                 {
@@ -41,8 +41,8 @@ namespace Adrenaline
         protected override void OnStartObstacle()
         {
             base.OnStartObstacle();
-            targets.ExForEach((it) => { it.SetActive(false); });
-            paths.ExForEach((path) => { StartCoroutine(Follower(path)); });
+            targets.ExForEachSafe((it) => { it.SetActive(false); });
+            paths.ExForEachSafe((path) => { StartCoroutine(Follower(path)); });
             IEnumerator Follower(PathCreator path)
             {
                 var maxDist = path.path.length;
@@ -77,7 +77,7 @@ namespace Adrenaline
                     float dist = startOffset * maxDist;
 
                     var anims = obj.GetComponentsInChildren<Animator>(true);
-                    anims.ExForEach((anim) =>
+                    anims.ExForEachSafe((anim) =>
                     {
                         anim.cullingMode = AnimatorCullingMode.CullCompletely;
                         anim.SetBool("moving", true);

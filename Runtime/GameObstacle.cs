@@ -95,7 +95,7 @@ namespace Adrenaline
         protected virtual void OnStartObstacle() 
         { 
             onStart?.Invoke();
-            startEffects.ExForEach((eff) =>
+            startEffects.ExForEachSafe((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -103,7 +103,7 @@ namespace Adrenaline
         protected virtual void OnStartReceiverDeath(IObstacleReceiverActor reciever) 
         { 
             onReceiverDeath?.Invoke();
-            receiverDeathEffects.ExForEach((eff) =>
+            receiverDeathEffects.ExForEachSafe((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -111,7 +111,7 @@ namespace Adrenaline
         protected virtual void OnJustInteractWithActor(IObstacleReceiverActor reciever)
         {
             onInteract?.Invoke();
-            interactEffects.ExForEach((eff) =>
+            interactEffects.ExForEachSafe((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -119,7 +119,7 @@ namespace Adrenaline
         protected virtual void OnDamageActor(IObstacleReceiverActor reciever)
         {
             onReceiverDamage?.Invoke(damageAmount);
-            damageReceiverEffects.ExForEach((eff) =>
+            damageReceiverEffects.ExForEachSafe((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -149,7 +149,7 @@ namespace Adrenaline
             if (useTagBasedDetection)
             {
                 var recieverHasAnyTag = false;
-                receiverTags.ExForEach((rtag) =>
+                receiverTags.ExForEachSafe((rtag) =>
                 {
                     if (col.CompareTag(rtag))
                     {
@@ -165,7 +165,7 @@ namespace Adrenaline
             {
                 var attackerHasAnyTag = false;
                 var currentTag = _transform.tag;
-                volume.AllowableObstacleTags.ExForEach((rtag) =>
+                volume.AllowableObstacleTags.ExForEachSafe((rtag) =>
                 {
                     if (currentTag == rtag)
                     {
