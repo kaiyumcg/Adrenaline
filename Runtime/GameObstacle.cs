@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityExt;
-using AttributeExt;
+using AttributeExt2;
 using UnityEngine.Events;
 
 namespace Adrenaline
@@ -17,7 +17,7 @@ namespace Adrenaline
         [SerializeField] bool oneHitKill = true;
         [SerializeField] float damageAmount = 2f;
         [SerializeField] bool useTagBasedDetection = false;
-        [SerializeField, TagSelector] List<string> receiverTags;
+        [SerializeField, Tag] List<string> receiverTags;
         [SerializeField] bool useDelay = false;
         [SerializeField] float delayAmount = 1.5f;
         [SerializeReference, SerializeReferenceButton] List<IEffectPlay> startEffects, interactEffects, receiverDeathEffects, damageReceiverEffects;

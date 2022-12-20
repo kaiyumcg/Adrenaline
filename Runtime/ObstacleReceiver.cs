@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityExt;
-using AttributeExt;
+using AttributeExt2;
 
 namespace Adrenaline
 {
@@ -10,7 +10,7 @@ namespace Adrenaline
     {
         [SerializeField] MonoBehaviour ownerActor;
         [SerializeField] bool useTagBasedRestriction = false;
-        [SerializeField, TagSelector] List<string> allowableObstacleTags;
+        [SerializeField, Tag] List<string> allowableObstacleTags;
         IObstacleReceiverActor owner;
 #if UNITY_EDITOR
         public MonoBehaviour OwnerActorScript { get { return ownerActor; } }

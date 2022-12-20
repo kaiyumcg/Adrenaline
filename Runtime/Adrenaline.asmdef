@@ -2,7 +2,7 @@
     "name": "Adrenaline",
     "rootNamespace": "",
     "references": [
-        "AttributeExt",
+        "AttributeExt2",
         "UnityExt",
         "PathCreator"
     ],
