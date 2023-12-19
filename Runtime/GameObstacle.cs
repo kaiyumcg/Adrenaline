@@ -95,7 +95,7 @@ namespace Adrenaline
         protected virtual void OnStartObstacle() 
         { 
             onStart?.Invoke();
-            startEffects.ExForEachSafe((eff) =>
+            startEffects.ExForEachSafeCustomClass((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -103,7 +103,7 @@ namespace Adrenaline
         protected virtual void OnStartReceiverDeath(IObstacleReceiverActor reciever) 
         { 
             onReceiverDeath?.Invoke();
-            receiverDeathEffects.ExForEachSafe((eff) =>
+            receiverDeathEffects.ExForEachSafeCustomClass((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -111,7 +111,7 @@ namespace Adrenaline
         protected virtual void OnJustInteractWithActor(IObstacleReceiverActor reciever)
         {
             onInteract?.Invoke();
-            interactEffects.ExForEachSafe((eff) =>
+            interactEffects.ExForEachSafeCustomClass((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -119,7 +119,7 @@ namespace Adrenaline
         protected virtual void OnDamageActor(IObstacleReceiverActor reciever)
         {
             onReceiverDamage?.Invoke(damageAmount);
-            damageReceiverEffects.ExForEachSafe((eff) =>
+            damageReceiverEffects.ExForEachSafeCustomClass((eff) =>
             {
                 if (eff != null) { eff.SpawnAndPlay(this); }
             });
@@ -149,7 +149,7 @@ namespace Adrenaline
             if (useTagBasedDetection)
             {
                 var recieverHasAnyTag = false;
-                receiverTags.ExForEachSafe((rtag) =>
+                receiverTags.ExForEachSafeCustomClass((rtag) =>
                 {
                     if (col.CompareTag(rtag))
                     {
@@ -165,7 +165,7 @@ namespace Adrenaline
             {
                 var attackerHasAnyTag = false;
                 var currentTag = _transform.tag;
-                volume.AllowableObstacleTags.ExForEachSafe((rtag) =>
+                volume.AllowableObstacleTags.ExForEachSafeCustomClass((rtag) =>
                 {
                     if (currentTag == rtag)
                     {
